@@ -1,0 +1,162 @@
+/* Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header .typing {
+  margin: 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+#toggle-chat img {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#toggle-chat img:hover {
+  opacity: 0.8;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  max-width: 80%;
+}
+
+.sent-message {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.received-message {
+  align-self: flex-start;
+  background-color: #eef3f7;
+  color: #333;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  box-shadow: inset 0 -1px 3px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+form {
+  display: flex;
+  width: 100%;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-right: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#chat-input:focus {
+  border-color: #007bff;
+}
+
+.chat-submit {
+  padding: 12px 20px;
+  border: none;
+  background-color: #8b8d90;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.chat-submit:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.chat-submit:active {
+  background-color: #004080;
+}
+
+@media (max-width: 600px) {
+  header {
+      padding: 8px; /* Reduced padding for a smaller height */
+      flex-direction: column; /* Stack header items vertically */
+      align-items: flex-start; /* Align items to the start */
+      height: 30px; /* Set a fixed height for header on small screens */
+      box-shadow: none; /* Remove box-shadow if needed */
+  }
+
+  header h2 {
+      font-size: 18px; /* Adjusted font size */
+  }
+
+  header .typing {
+      font-size: 10px; /* Adjusted font size */
+  }
+
+  #toggle-chat {
+      display: none; /* Hide chat icon on small screens */
+  }
+
+  main {
+      margin: 10px; /* Reduced margin to fit smaller screens */
+  }
+
+  #chat-input {
+      font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  .chat-submit {
+      padding: 14px 24px; /* Increase padding for better tap target */
+      font-size: 18px; /* Increase font size for better readability */
+      margin-top: 8px; /* Adjust margin to ensure spacing */
+  }
+}
